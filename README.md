@@ -1,2 +1,0 @@
-# OISISI-AI60-42-49-2019
-OISISI Projekat
