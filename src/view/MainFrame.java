@@ -18,6 +18,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import java.awt.Dimension; 
+import java.awt.Image; 
+import java.awt.Toolkit;
+
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JTable;
@@ -28,9 +32,19 @@ import javax.swing.SwingUtilities;
 public class MainFrame extends JFrame {
 	
 	public MainFrame() { 
-		 super(); 
-		 setSize(300, 200); // Dimenzije su inicijalno (0, 0)
-		 setTitle("My First GUI App"); 
+		Toolkit kit = Toolkit.getDefaultToolkit(); 
+		 Dimension screenSize = kit.getScreenSize(); 
+		 int screenHeight = screenSize.height; 
+		 int screenWidth = screenSize.width; 
+		 // Podesavamo dimenzije prozora na polovinu dimenzija ekrana
+		 setSize(screenWidth / 2, screenHeight / 2); 
+		 // Dodeljujemo ikonu 
+		 Image img = kit.getImage("images/iko.jpg"); 
+		 setIconImage(img); 
+		 //Podesavamo naslov
+		 setTitle("My Second GUI App"); 
+		 //Postavljamo akciju pri zatvaranju prozora
+		 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
 		 }
 	
 	
