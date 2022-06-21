@@ -31,6 +31,18 @@ import javax.swing.SwingUtilities;
 
 public class MainFrame extends JFrame {
 	
+private static MainFrame instance = null;
+	
+	public static MainFrame getInstance() {
+		if(instance == null)
+		{
+			instance = new MainFrame();
+			
+		}
+		return instance;
+	}
+	private StatusBar statusBar;
+	
 
 	
 	
@@ -54,11 +66,12 @@ public class MainFrame extends JFrame {
         //dodajemo u Frame naš Toolbar, klasa BorderLayout se odnosi na rad sa prostorim rasporedom
         //komponenti, za sada je dovoljno znati da na ovaj način Toolbar se postavlja na vrh glavne forme
         add(toolbar, BorderLayout.NORTH);
+    	statusBar = new StatusBar();
+		statusBar.setLayout(new BoxLayout(statusBar, BoxLayout.X_AXIS));
+		 this.add(statusBar, BorderLayout.SOUTH);
 		
 	
 	}
 	
-	
-		
 	
 }
