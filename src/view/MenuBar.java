@@ -48,7 +48,7 @@ public class MenuBar extends JMenuBar{
 //		JRadioButtonMenuItem rmiInsert=new 
 //		JRadioButtonMenuItem("Insert",true);
 //		JRadioButtonMenuItem rmiOver=new
-//		JRadioButtonMenuItem("Overtype");
+//		JRadioButtonMenuItem("Overtype");S
 //		bg1.add(rmiInsert);
 //		bg1.add(rmiOver);
 //		
