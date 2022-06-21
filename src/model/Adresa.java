@@ -8,13 +8,11 @@ public class Adresa {
 
     private static final long serialVersionUID = -6015214315107758967L;
     public enum Status{B,S}
-    //private String ime;
-    //private String prezime;
-   // private Date datum_rodjenja;
+  
     private String broj;
     private String ulica;
     private String grad;
-    //private String broj_indeksa;
+   
 
 
     public Adresa(){}
