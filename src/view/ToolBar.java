@@ -27,21 +27,21 @@ public class ToolBar extends JToolBar{
 		super(SwingConstants.HORIZONTAL);
 		JButton btnNew = new JButton();
 		btnNew.setToolTipText("New");
-		btnNew.setIcon(new ImageIcon("images/new_22x22.jpg"));
+		btnNew.setIcon(new ImageIcon("images/add.png"));
 		add(btnNew);
 
 		addSeparator();
 
 		JButton btnOpen = new JButton();
 		btnOpen.setToolTipText("Open");
-		btnOpen.setIcon(new ImageIcon("images/open_22x22.jpg"));
+		btnOpen.setIcon(new ImageIcon("images/edit.png"));
 		add(btnOpen);
 	
 		addSeparator();
 		
 		JToggleButton tglBtnBold=new JToggleButton();
 		tglBtnBold.setToolTipText("Bold");
-		tglBtnBold.setIcon(new ImageIcon("images/bold_22x22.jpg"));
+		tglBtnBold.setIcon(new ImageIcon("images/delete.png"));
 		add(tglBtnBold);
 		
 
