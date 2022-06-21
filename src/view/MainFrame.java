@@ -31,23 +31,34 @@ import javax.swing.SwingUtilities;
 
 public class MainFrame extends JFrame {
 	
-	public MainFrame() { 
-		Toolkit kit = Toolkit.getDefaultToolkit(); 
-		 Dimension screenSize = kit.getScreenSize(); 
-		 int screenHeight = screenSize.height; 
-		 int screenWidth = screenSize.width; 
-		 // Podesavamo dimenzije prozora na polovinu dimenzija ekrana
-		 setSize(screenWidth / 2, screenHeight / 2); 
-		 // Dodeljujemo ikonu 
-		 Image img = kit.getImage("images/iko.jpg"); 
-		 setIconImage(img); 
-		 //Podesavamo naslov
-		 setTitle("My Second GUI App"); 
-		 //Postavljamo akciju pri zatvaranju prozora
-		 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
-		 }
+
 	
 	
+	public MainFrame() {
+		
+		Toolkit kit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = kit.getScreenSize();
+        int screenHeight = screenSize.height;
+        int screenWidth = screenSize.width;
+        setSize(screenWidth / 2, screenHeight / 2);
+        setTitle("Primer 7 - korišćenje toolbara aplikacije");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        //kreiranje naslednika klase JMenuBar i njeno postavljanje u glavni prozor aplikacije
+        MenuBar menu=new MenuBar();
+        this.setJMenuBar(menu);
+
+      //kreiramo instancu klase Toolbar
+        ToolBar toolbar=new ToolBar();
+        //dodajemo u Frame naš Toolbar, klasa BorderLayout se odnosi na rad sa prostorim rasporedom
+        //komponenti, za sada je dovoljno znati da na ovaj način Toolbar se postavlja na vrh glavne forme
+        add(toolbar, BorderLayout.NORTH);
+		
 	
+	}
+	
+	
+		
 	
 }
