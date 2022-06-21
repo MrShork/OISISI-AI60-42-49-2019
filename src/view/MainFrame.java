@@ -69,7 +69,7 @@ private static MainFrame instance = null;
     	statusBar = new StatusBar();
 		statusBar.setLayout(new BoxLayout(statusBar, BoxLayout.X_AXIS));
 		 this.add(statusBar, BorderLayout.SOUTH);
-		
+		add(Tabovi.getInstance());
 	
 	}
 	
