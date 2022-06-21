@@ -22,43 +22,45 @@ public class MenuBar extends JMenuBar{
 	public MenuBar (){
 		
 	    JMenu file=new JMenu("File");
-	    JMenu miNew =new JMenu("New");
-		JMenuItem miProject=new JMenuItem("Project");
-		JMenuItem miPackage=new JMenuItem("Package");
-		miNew.add(miProject);
-		miNew.addSeparator();
-		miNew.add(miPackage);
+	    JMenu miOpen =new JMenu("Open");		
+	    JMenuItem miProject=new JMenuItem("Zaposleni");	
+	    JMenuItem miPackage=new JMenuItem("Softveri");
+	    miOpen.add(miProject);
+	    miOpen.addSeparator();
+	    miOpen.add(miPackage);
 		
-		JMenuItem miOpen =new JMenuItem("Open");
-		JMenuItem miClose =new JMenuItem("Close");
-		JMenuItem miCloseAll =new JMenuItem("Close All");
-				
+		JMenuItem miNew =new JMenuItem("New");
+		JMenuItem miClose =new JMenuItem("Exit");
+		//JMenuItem miCloseAll =new JMenuItem("Close All");
+		
 		file.add(miNew);
 		file.addSeparator();
 		file.add(miOpen);
+		
+		
 		file.addSeparator();
 		file.add(miClose);
-		file.add(miCloseAll);
+		//file.add(miCloseAll);
 		file.addSeparator();
 		
 		//radio button-i u ovom primeru rade kao grupa:
-		ButtonGroup bg1=new ButtonGroup();
-		JRadioButtonMenuItem rmiInsert=new 
-		JRadioButtonMenuItem("Insert",true);
-		JRadioButtonMenuItem rmiOver=new
-		JRadioButtonMenuItem("Overtype");
-		bg1.add(rmiInsert);
-		bg1.add(rmiOver);
-		
-		file.add(rmiInsert);
-		file.add(rmiOver);
+//		ButtonGroup bg1=new ButtonGroup();
+//		JRadioButtonMenuItem rmiInsert=new 
+//		JRadioButtonMenuItem("Insert",true);
+//		JRadioButtonMenuItem rmiOver=new
+//		JRadioButtonMenuItem("Overtype");
+//		bg1.add(rmiInsert);
+//		bg1.add(rmiOver);
+//		
+//		file.add(rmiInsert);
+//		file.add(rmiOver);
 		
 		JMenu edit=new JMenu("Edit");
-		JMenu source=new JMenu("Source");
+		JMenu help=new JMenu("Help");
 		
 		add(file);
 		add(edit);
-		add(source);
+		add(help);
 		
 	}
 
