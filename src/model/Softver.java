@@ -10,12 +10,12 @@ public class Softver {
 	  	public enum Naziv{Max3Ds, ZBrush, Blender}
 	  	private Naziv naziv;
 	  	private Render renderer;
-	  	private Cetkica cetkice;
+	  	private ArrayList<Cetkica> cetkice;
 	  
-	    public Cetkica getCetkice() {
+	    public ArrayList<Cetkica> getCetkice() {
 			return cetkice;
 		}
-		public void setCetkice(Cetkica cetkice) {
+		public void setCetkice(ArrayList<Cetkica> cetkice) {
 			this.cetkice = cetkice;
 		}
 		public String getAlatiZaAnimaciju() {
@@ -36,10 +36,10 @@ public class Softver {
 		public void setNaziv(Naziv naziv) {
 			this.naziv = naziv;
 		}
-		public Softver(Naziv naziv, Cetkica cetkice, String format , String alatiZaAnimaciju, Render renderer) {
+		public Softver(Naziv naziv, ArrayList<Cetkica> cetkice, String format , String alatiZaAnimaciju, Render renderer) {
 			super();
 			this.naziv = naziv;
-			
+			this.cetkice = cetkice;
 			Format = format;
 			AlatiZaAnimaciju = alatiZaAnimaciju;
 			this.renderer = renderer;

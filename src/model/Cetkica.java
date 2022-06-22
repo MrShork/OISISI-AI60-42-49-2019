@@ -35,5 +35,7 @@ public class Cetkica {
 			Namena = namena;
 			Boja = boja;
 		}
+		
+		
 	   
 }
