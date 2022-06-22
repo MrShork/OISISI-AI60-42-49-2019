@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -9,11 +10,16 @@ import java.awt.event.ActionListener;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import model.Zaposleni;
+import model.BaseofZaposleni;
+import model.Softver;
+import model.BaseofSoftware;
 
 public class AddZaposleni extends JDialog {
 	
@@ -52,11 +58,18 @@ public class AddZaposleni extends JDialog {
 		Jmbg.setMaximumSize(new Dimension(300,25));
 		Jmbg.setLayout(new BoxLayout(Jmbg, BoxLayout.X_AXIS));
 		
+		JPanel email_adresa = new JPanel();
+		email_adresa.setMaximumSize(new Dimension(300,25));
+		email_adresa.setLayout(new BoxLayout(email_adresa, BoxLayout.X_AXIS));
+		
+		
+		
+		
 		JPanel buttons = new JPanel();
 		buttons.setMaximumSize(new Dimension(200,25));
 		buttons.setLayout(new BoxLayout(buttons, BoxLayout.X_AXIS));
 		
-		Dimension dim=new Dimension(150,20);
+		Dimension dim=new Dimension(100,20);
 
         JLabel lblName=new JLabel("Ime");
         lblName.setPreferredSize(dim);
@@ -95,6 +108,19 @@ public class AddZaposleni extends JDialog {
         Jmbg.add(lbljmbg);
 		Jmbg.add(txtjmbg);
 		
+		JLabel lblemail=new JLabel("Email");
+        lblemail.setPreferredSize(dim);
+        JTextField txtemail=new JTextField();
+        txtemail.setPreferredSize(dim);
+     
+        
+		email_adresa.add(lblemail);
+        email_adresa.add(txtemail);
+        
+        
+       
+		
+		
 		
 		
 	    JButton quit=new JButton("Odustani");
@@ -129,6 +155,8 @@ public class AddZaposleni extends JDialog {
 			panel.add(adresa_stanovanja);
 			panel.add(Box.createVerticalStrut(20));
 			panel.add(Jmbg);
+			panel.add(Box.createVerticalStrut(20));
+			panel.add(email_adresa);
 			panel.add(Box.createVerticalStrut(20));
 			
 			panel.add(Box.createVerticalStrut(20));
