@@ -53,6 +53,8 @@ public class BaseofZaposleni {
 		
 		
 		
+		
+		
 				
 		
 		//this.zaposleni.add(new Zaposleni("Luka","Peric","184987135" ,d,new Adresa("Jug Bogdana","24","Novi Sad"),"LukaLukic@Lukoslav.com", Zaposleni.Softver.Max3Ds));
@@ -66,21 +68,31 @@ public class BaseofZaposleni {
 	static Adresa a1 = new Adresa("24", "Jug Bogdana", "Novi Sad");
 	static Adresa a2 = new Adresa("11", "Urosa Nejakog", "Indjija");
 	static Adresa a3 = new Adresa("17", "Jovana Cvijica", "Banja Koviljaca");
+	static Adresa a4 = new Adresa("12", "Karadjordjeva", "Loznica");
+	static Adresa a5 = new Adresa("205", "Mocartova", "Beograd");
+	static Adresa a6 = new Adresa("19", "Milutina Milankovica", "Novi Sad");
 	
 	static Zaposleni z1 = new Zaposleni("Luka","Peric","184987135" ,new Date(2000,29,0),a1,"LukaLukic@Lukoslav.com", Zaposleni.Softver.Max3Ds);
 	static Zaposleni z2 =new Zaposleni("Vasilije","Vulin","6516851" ,new Date(2002,06,16),a2,"pomoziboze@raj.com", Zaposleni.Softver.ZBrush);
 	static Zaposleni z3 =new Zaposleni("Ratko","Lazarevic","98351684" ,new Date(2005,03,11),a3,"palacinjak.krem@plazma.com", Zaposleni.Softver.Blender);
-	
-	
+	static Zaposleni z4 = new Zaposleni("Marko","Milosevic", "45212366",new Date(1999,12,29),a4,"markom@gmail.com", Zaposleni.Softver.Max3Ds);
+	static Zaposleni z5 = new Zaposleni("Luka","Kojic", "421578967",new Date(1973,05,17),a5,"luka1973@gmail.com", Zaposleni.Softver.Blender);
+	static Zaposleni z6 = new Zaposleni("Miroslav","Ilic", "21547896",new Date(1985,07,23),a6,"miki.ilic1@gmail.com", Zaposleni.Softver.ZBrush);
 	
 	public static void popuniListe() {
 		adrese.add(a1);
 		adrese.add(a2);
 		adrese.add(a3);
+		adrese.add(a4);
+		adrese.add(a5);
+		adrese.add(a6);
 
 		zaposleni.add(z1);
 		zaposleni.add(z2);
 		zaposleni.add(z3);
+		zaposleni.add(z4);
+		zaposleni.add(z5);
+		zaposleni.add(z6);
 	}
 	
 
@@ -122,6 +134,10 @@ public class BaseofZaposleni {
 
 	public Zaposleni getRow(int rowIndex) {
 		return this.zaposleni.get(rowIndex);
+	}
+	public void AddZaposelni(Zaposleni newWorker)
+	{
+		this.zaposleni.add(newWorker);
 	}
 	
 	

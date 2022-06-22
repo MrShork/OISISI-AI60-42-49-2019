@@ -37,6 +37,16 @@ public class MainFrame extends JFrame implements ChangeListener {
 	/**
 	 * 
 	 */
+private static MainFrame instance = null;
+	
+	public static MainFrame getInstance() {
+		if(instance == null)
+		{
+			instance = new MainFrame();
+			//instance.initAll();
+		}
+		return instance;
+	}
 	private static final long serialVersionUID = -7240939624608584060L;
 	protected int currentTab = 0;
 	
@@ -115,9 +125,10 @@ public class MainFrame extends JFrame implements ChangeListener {
 		
 		generisiTabele();
 		
-		myTabbedPane.addChangeListener(this);
+		//myTabbedPane.addChangeListener(this);
 		
 		currentTab = myTabbedPane.getSelectedIndex();
+		System.out.println(currentTab);
 
 		this.add(myTabbedPane);
 		
@@ -183,10 +194,16 @@ public class MainFrame extends JFrame implements ChangeListener {
 		softwareTable.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		softwareTable.setDefaultEditor(Object.class, null);
 		JScrollPane stScrollPane = new JScrollPane(softwareTable);
-		
-		myTabbedPane.addTab("Zaposleni", ztScrollPane);
 		myTabbedPane.addTab("Softver", stScrollPane);
+		myTabbedPane.addTab("Zaposleni", ztScrollPane);
+		
 	}
+	public int getSelectedTab() {
+		System.out.println(myTabbedPane.getSelectedIndex());
+		
+		return myTabbedPane.getSelectedIndex();
+	}
+	
 
 	@Override
 	public void stateChanged(ChangeEvent e) {

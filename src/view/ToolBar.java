@@ -28,6 +28,25 @@ public class ToolBar extends JToolBar{
 		JButton btnNew = new JButton();
 		btnNew.setToolTipText("New");
 		btnNew.setIcon(new ImageIcon("images/add.png"));
+		btnNew.addActionListener(new ActionListener() {
+			
+			
+			public void actionPerformed(ActionEvent arg0) {
+				//int temp = parent.currentTab;
+				
+				if(MainFrame.getInstance().getSelectedTab() == 0) {
+					AddZaposleni dialog = new AddZaposleni(MainFrame.getInstance());
+					dialog.setVisible(true);
+				}
+				
+				  else 
+				  {
+					  EditZaposleni dialog  = new EditZaposleni();
+					  
+				  }
+				 
+			}
+		});
 		add(btnNew);
 
 		addSeparator();
@@ -35,7 +54,10 @@ public class ToolBar extends JToolBar{
 		JButton btnOpen = new JButton();
 		btnOpen.setToolTipText("Open");
 		btnOpen.setIcon(new ImageIcon("images/edit.png"));
+	
 		add(btnOpen);
+		
+
 	
 		addSeparator();
 		

@@ -7,7 +7,7 @@ public class Softver {
 	  private static final long serialVersionUID = -6015214315107758967L;
 	  
 	  	//public enum Renderer{Vray,Arnold,Scanline}
-	  	public enum Naziv{Max3Ds, ZBrush, Blender}
+	  	public enum Naziv{Max3Ds, ZBrush, Blender, Photoshop}
 	  	private Naziv naziv;
 	  	private Render renderer;
 	  	private ArrayList<Cetkica> cetkice;
