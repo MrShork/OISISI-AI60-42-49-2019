@@ -1,6 +1,8 @@
 package view;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -84,7 +86,17 @@ public class AddZaposleni extends JDialog {
         
         adresa_stanovanja.add(lblAdress);
 		adresa_stanovanja.add(txtAdress);
-
+		
+		JLabel lbljmbg=new JLabel("JMBG");
+        lbljmbg.setPreferredSize(dim);
+        JTextField txtjmbg=new JTextField();
+        txtjmbg.setPreferredSize(dim);
+     
+        Jmbg.add(lbljmbg);
+		Jmbg.add(txtjmbg);
+		
+		
+		
 	    JButton quit=new JButton("Odustani");
         quit.setPreferredSize(new Dimension(100,20));
 		quit.addActionListener(new ActionListener() {
@@ -96,7 +108,11 @@ public class AddZaposleni extends JDialog {
 				dispose();
 				
 			}
+			
+			
 		});
+		
+		
 		  confirm.setPreferredSize(new Dimension(100,20));
 		  
 		  buttons.add(confirm);
@@ -112,6 +128,8 @@ public class AddZaposleni extends JDialog {
 			panel.add(Box.createVerticalStrut(20));
 			panel.add(adresa_stanovanja);
 			panel.add(Box.createVerticalStrut(20));
+			panel.add(Jmbg);
+			panel.add(Box.createVerticalStrut(20));
 			
 			panel.add(Box.createVerticalStrut(20));
 			panel.add(buttons);
@@ -119,6 +137,7 @@ public class AddZaposleni extends JDialog {
 			
 			add(panel);
 			setVisible(true);
+			
 			
        
 	}

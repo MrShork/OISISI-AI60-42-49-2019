@@ -15,6 +15,7 @@ import javax.swing.SwingConstants;
 
 import javax.swing.Box;
 import javax.swing.JTextField;
+import controllers.DialogController;
 
 
 
@@ -64,6 +65,7 @@ public class ToolBar extends JToolBar{
 		JToggleButton tglBtnBold=new JToggleButton();
 		tglBtnBold.setToolTipText("Bold");
 		tglBtnBold.setIcon(new ImageIcon("images/delete.png"));
+		tglBtnBold.addActionListener(DialogController.deleteDialog());
 		add(tglBtnBold);
 		
 

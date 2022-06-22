@@ -194,8 +194,9 @@ private static MainFrame instance = null;
 		softwareTable.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 		softwareTable.setDefaultEditor(Object.class, null);
 		JScrollPane stScrollPane = new JScrollPane(softwareTable);
-		myTabbedPane.addTab("Softver", stScrollPane);
+		
 		myTabbedPane.addTab("Zaposleni", ztScrollPane);
+		myTabbedPane.addTab("Softver", stScrollPane);
 		
 	}
 	public int getSelectedTab() {
@@ -209,7 +210,8 @@ private static MainFrame instance = null;
 	public void stateChanged(ChangeEvent e) {
         JTabbedPane tabbedPane = (JTabbedPane) e.getSource();
         currentTab = tabbedPane.getSelectedIndex();
-	} 
+	}
+
 	
 
 }
