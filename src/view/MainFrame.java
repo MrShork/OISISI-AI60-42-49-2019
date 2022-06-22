@@ -190,20 +190,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		setBackground(Color.RED);
-//		
-//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-//		LocalDateTime currentTime = LocalDateTime.now();  
-//		System.out.println(dtf.format(currentTime));
-	
-//		JPanel statusPanel = new JPanel();
-//		statusPanel.setBorder(new BevelBorder(BevelBorder.LOWERED));
-//		add(statusPanel, BorderLayout.SOUTH);
-//		statusPanel.setPreferredSize(new Dimension(getWidth(), 24));
-//		statusPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
-//		JLabel statusLabel = new JLabel(dtf.format(currentTime));
-//		
-//		
-//		statusPanel.add(statusLabel);
+
 		
 		myTabbedPane = new JTabbedPane();
 		
@@ -219,7 +206,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 	}
 	
 	private void generisiTabele() {
-//		Pravljenje tabele zaposlenih
+
 		String[] zaposleniHeader = new String[] { "Ime", "Prezime", "JMBG", "Datum rodjenja", "Email", "Adresa", "Softver"};
 		
 		velicinaZaposleni = BaseofZaposleni.getZaposleni().size();
@@ -246,7 +233,7 @@ public class MainFrame extends JFrame implements ChangeListener {
 		JScrollPane ztScrollPane = new JScrollPane(zaposleniTable);
 	
 		
-//		Pravljenje tabele softvera		
+	
 		String[] softverHeader = new String[] { "Naziv", "Cetkice", "Format fajla", "Alati", "Render" };
 
 		int velicinaSoftver = BaseofSoftware.getSoftveri().size();

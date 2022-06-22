@@ -52,9 +52,7 @@ public class StatusBar extends JPanel{
 	
 		
 	
-		/*DateTimeFormatter dtf = DateTimeFormatter.ofPattern(" HH:mm dd/MM//yyyy");
-		statusLabel2.setText(dtf.format(LocalDateTime.now()).toString());
-		statusBar.add(statusLabel2);*/
+		
 		Timer timer = new Timer(1000, e -> 
 		{
 	        Date date = new Date();
@@ -64,9 +62,9 @@ public class StatusBar extends JPanel{
 	    timer.start();
 	   
 	    
-		//statusBar.add(statusLabel);
+		
 		statusBar.add(Box.createHorizontalGlue());
-		//statusBar.add(statusLabel2);
+		
 		
 		
 		add("South",statusBar);
