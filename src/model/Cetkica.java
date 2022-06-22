@@ -3,7 +3,7 @@ package model;
 public class Cetkica {
 	
 	  private static final long serialVersionUID = -6015214315107758967L;
-	    public enum Status{B,S}
+	    
 	   
 	    private String Naziv;
 	    private String Namena;
@@ -12,7 +12,7 @@ public class Cetkica {
 			return Naziv;
 		}
 		public void setNaziv(String naziv) {
-			Naziv = naziv;
+			this.Naziv = naziv;
 		}
 		public String getNamena() {
 			return Namena;
@@ -31,7 +31,7 @@ public class Cetkica {
 		}
 		public Cetkica(String naziv, String namena, String boja) {
 			super();
-			Naziv = naziv;
+			this.Naziv = naziv;
 			Namena = namena;
 			Boja = boja;
 		}

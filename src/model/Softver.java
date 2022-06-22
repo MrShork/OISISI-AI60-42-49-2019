@@ -5,44 +5,58 @@ import java.util.ArrayList;
 public class Softver {
 	
 	  private static final long serialVersionUID = -6015214315107758967L;
-	    public enum Status{B,S}
-	   
-	    public ArrayList<String> getCetkice() {
-			return Cetkice;
+	  
+	  	//public enum Renderer{Vray,Arnold,Scanline}
+	  	public enum Naziv{Max3Ds, ZBrush, Blender}
+	  	private Naziv naziv;
+	  	private Render renderer;
+	  	private Cetkica cetkice;
+	  
+	    public Cetkica getCetkice() {
+			return cetkice;
 		}
-		public void setCetkice(ArrayList<String> cetkice) {
-			Cetkice = cetkice;
+		public void setCetkice(Cetkica cetkice) {
+			this.cetkice = cetkice;
 		}
-		public ArrayList<String> getAlatiZaAnimaciju() {
+		public String getAlatiZaAnimaciju() {
 			return AlatiZaAnimaciju;
 		}
-		public void setAlatiZaAnimaciju(ArrayList<String> alatiZaAnimaciju) {
+		public void setAlatiZaAnimaciju(String alatiZaAnimaciju) {
 			AlatiZaAnimaciju = alatiZaAnimaciju;
 		}
-		public String getRender() {
-			return Render;
+		public Render getRender() {
+			return renderer;
 		}
-		public void setRender(String render) {
-			Render = render;
+		public void setRender(Render renderer) {
+			this.renderer = renderer;
 		}
 		public static long getSerialversionuid() {
 			return serialVersionUID;
 		}
-		public void setNaziv(String naziv) {
-			Naziv = naziv;
+		public void setNaziv(Naziv naziv) {
+			this.naziv = naziv;
 		}
-		public Softver(String naziv, ArrayList<String> cetkice, ArrayList<String> alatiZaAnimaciju, String render) {
+		public Softver(Naziv naziv, Cetkica cetkice, String format , String alatiZaAnimaciju, Render renderer) {
 			super();
-			Naziv = naziv;
-			Cetkice = cetkice;
+			this.naziv = naziv;
+			
+			Format = format;
 			AlatiZaAnimaciju = alatiZaAnimaciju;
-			Render = render;
+			this.renderer = renderer;
 		}
-		private String Naziv;
-	    private ArrayList<String> Cetkice;
-	    private ArrayList<String> AlatiZaAnimaciju;
-	    private String Render;
-		public String getNaziv() {
-			return Naziv;
+		//private String Naziv;
+	    
+	    private String Format;
+	    
+	    public String getFormat() {
+			return Format;
+		}
+		public void setFormat(String format) {
+			Format = format;
+		}
+		private String AlatiZaAnimaciju;
+	   // private String Render;
+		public Naziv getNaziv() {
+			return naziv;
 		}
 }

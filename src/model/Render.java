@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Render {
 	
-	public Render(ArrayList<String> materijal, ArrayList<String> kamere, ArrayList<String> objekti, String naziv) {
+	public Render(String materijal,String kamere, String objekti, String naziv) {
 		super();
 		Materijal = materijal;
 		Kamere = kamere;
@@ -12,28 +12,28 @@ public class Render {
 		Naziv = naziv;
 	}
 	private static final long serialVersionUID = -6015214315107758967L;
-    public enum Status{B,S}
+    //public enum Renderer{Vray,Arnold,Scanline}
    
-    private ArrayList<String> Materijal ;
-    private ArrayList<String> Kamere ;
-    private ArrayList<String> Objekti;
+    private String Materijal ;
+    private String Kamere ;
+    private String Objekti;
     private String Naziv;
-	public ArrayList<String> getMaterijal() {
+	public String getMaterijal() {
 		return Materijal;
 	}
-	public void setMaterijal(ArrayList<String> materijal) {
+	public void setMaterijal(String materijal) {
 		Materijal = materijal;
 	}
-	public ArrayList<String> getKamere() {
+	public String getKamere() {
 		return Kamere;
 	}
-	public void setKamere(ArrayList<String> kamere) {
+	public void setKamere(String kamere) {
 		Kamere = kamere;
 	}
-	public ArrayList<String> getObjekti() {
+	public String getObjekti() {
 		return Objekti;
 	}
-	public void setObjekti(ArrayList<String> objekti) {
+	public void setObjekti(String objekti) {
 		Objekti = objekti;
 	}
 	public String getNaziv() {
