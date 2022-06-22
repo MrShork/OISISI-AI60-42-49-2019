@@ -31,7 +31,7 @@ public class MenuBar extends JMenuBar{
 		
 		JMenuItem miNew =new JMenuItem("New");
 		JMenuItem miClose =new JMenuItem("Exit");
-		//JMenuItem miCloseAll =new JMenuItem("Close All");
+		
 		
 		file.add(miNew);
 		file.addSeparator();
@@ -40,23 +40,21 @@ public class MenuBar extends JMenuBar{
 		
 		file.addSeparator();
 		file.add(miClose);
-		//file.add(miCloseAll);
+		
 		file.addSeparator();
 		
-		//radio button-i u ovom primeru rade kao grupa:
-//		ButtonGroup bg1=new ButtonGroup();
-//		JRadioButtonMenuItem rmiInsert=new 
-//		JRadioButtonMenuItem("Insert",true);
-//		JRadioButtonMenuItem rmiOver=new
-//		JRadioButtonMenuItem("Overtype");S
-//		bg1.add(rmiInsert);
-//		bg1.add(rmiOver);
-//		
-//		file.add(rmiInsert);
-//		file.add(rmiOver);
+		
 		
 		JMenu edit=new JMenu("Edit");
+		 JMenuItem miEdit=new JMenuItem("Edit");
+		 JMenuItem miDelete=new JMenuItem("Delete");
+		
 		JMenu help=new JMenu("Help");
+		JMenuItem miAbout=new JMenuItem("About");
+		
+		edit.add(miEdit);
+		edit.add(miDelete);
+		help.add(miAbout);
 		
 		add(file);
 		add(edit);
