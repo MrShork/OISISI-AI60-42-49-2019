@@ -25,8 +25,8 @@ public class BaseofSoftware {
 	public static ArrayList<Softver> softveri = new ArrayList<Softver>();
 	public static ArrayList<Cetkica> cetkice = new ArrayList<Cetkica>();
 	
-	static Cetkica c1 = new Cetkica("Smooth", "Smoothing", "Providna");
-	static Cetkica c2 = new Cetkica("Standard", "Dodaje masu", "Siva");
+	static Cetkica c1 = new Cetkica("Smooth, Pull, Crease", "Smoothing", "Providna");
+	static Cetkica c2 = new Cetkica("Standard, Bend", "Dodaje masu", "Siva");
 	static Cetkica c3 = new Cetkica("Deform", "Deformise masu", "Crna");
 	
 	static Softver s1 = new Softver(Naziv.Max3Ds, new ArrayList<Cetkica>(List.of(c1)), ".max", "Inverse Kinematics", new Render("Kamen", "2", "Kockasti", "Vray"));
