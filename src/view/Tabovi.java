@@ -43,3 +43,7 @@ public class Tabovi extends JTabbedPane {
 		setVisible(true);
 }
 	}
+
+
+
+

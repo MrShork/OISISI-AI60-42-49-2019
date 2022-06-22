@@ -53,7 +53,7 @@ private static MainFrame instance = null;
         int screenHeight = screenSize.height;
         int screenWidth = screenSize.width;
         setSize(screenWidth / 2, screenHeight / 2);
-        setTitle("Primer 7 - korišćenje toolbara aplikacije");
+        setTitle("Aplikacija");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
@@ -70,8 +70,13 @@ private static MainFrame instance = null;
 		statusBar.setLayout(new BoxLayout(statusBar, BoxLayout.X_AXIS));
 		 this.add(statusBar, BorderLayout.SOUTH);
 		add(Tabovi.getInstance());
+		
 	
 	}
 	
 	
 }
+
+
+
+
